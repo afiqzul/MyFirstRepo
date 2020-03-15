@@ -1,0 +1,86 @@
+[afiqzul@Sieben MyFirstRepo]$ git remote
+[afiqzul@Sieben MyFirstRepo]$ git remote add origin https://github.com/afiqzul/MyFirstRepo.git
+[afiqzul@Sieben MyFirstRepo]$ git remote
+origin
+[afiqzul@Sieben MyFirstRepo]$ git push -u origin master
+Username for 'https://github.com': afiqzul
+Password for 'https://afiqzul@github.com':
+To https://github.com/afiqzul/MyFirstRepo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/afiqzul/MyFirstRepo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first merge the remote changes (e.g.,
+hint: 'git pull') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[afiqzul@Sieben MyFirstRepo]$ git pull origin master
+warning: no common commits
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From https://github.com/afiqzul/MyFirstRepo
+ * branch            master     -> FETCH_HEAD
+Already up-to-date!
+Merge made by the 'recursive' strategy.
+[afiqzul@Sieben MyFirstRepo]$ git push origin master
+Username for 'https://github.com': afiqzul
+Password for 'https://afiqzul@github.com':
+Counting objects: 22, done.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (21/21), 1.80 KiB | 0 bytes/s, done.
+Total 21 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/afiqzul/MyFirstRepo.git
+   e1a3757..650afb4  master -> master
+[afiqzul@Sieben MyFirstRepo]$ rm readme.txt
+[afiqzul@Sieben MyFirstRepo]$ vi README.md
+[afiqzul@Sieben MyFirstRepo]$ git add -A
+[afiqzul@Sieben MyFirstRepo]$ git commit -m "added README.md"
+[master 7ebf75f] added README.md
+ 2 files changed, 28 insertions(+), 4 deletions(-)
+ create mode 100644 README.md
+ delete mode 100644 readme.txt
+[afiqzul@Sieben MyFirstRepo]$
+[afiqzul@Sieben MyFirstRepo]$
+[afiqzul@Sieben MyFirstRepo]$ git push origin master
+Username for 'https://github.com': afiqzul
+Password for 'https://afiqzul@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 625 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/afiqzul/MyFirstRepo.git
+   650afb4..7ebf75f  master -> master
+[afiqzul@Sieben MyFirstRepo]$ vi README.md
+[afiqzul@Sieben MyFirstRepo]$ vi csmc.sh
+[afiqzul@Sieben MyFirstRepo]$ git add -A
+[afiqzul@Sieben MyFirstRepo]$ git commit -m "added csmc.sh"
+[master e78642e] added csmc.sh
+ 1 file changed, 720 insertions(+)
+ create mode 100644 csmc.sh
+[afiqzul@Sieben MyFirstRepo]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': afiqzul
+Password for 'https://afiqzul@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 4.41 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/afiqzul/MyFirstRepo.git
+   7ebf75f..e78642e  master -> master
+[afiqzul@Sieben MyFirstRepo]$
